@@ -1,0 +1,23 @@
+log_folder=/temp/
+log_filePattern='ll_'yyyyMMdd'.log'
+log_format=%1$tY/%1$tm/%1$td %1$tH:%1$tM:%1$tS.%1$tL %4$s [%2$s] %5$s %6$s%n
+log_level=INFO
+log_exclude=org.glassfish.jersey.internal.Errors
+
+db_suffix=.h2
+db_auto=update
+
+db_datasource_class.h2=org.h2.jdbcx.JdbcDataSource
+db_url.h2=jdbc:h2:~/db
+
+db_datasource_class.oracle=oracle.jdbc.pool.OracleDataSource
+db_url.oracle=jdbc:oracle:thin:user/password@localhost:1521/db
+
+db_datasource_class.mysql=com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+db_url.mysql=jdbc:mysql://localhost/db?user=user&password=password&useUnicode=true&characterEncoding=utf8
+
+db_datasource_class.postgres=org.postgresql.ds.PGSimpleDataSource
+db_url.postgres=jdbc:postgresql://localhost:5432/db?user=user&password=password
+
+app_upload_folder=/temp/
+app_headers=X-UA-Compatible:IE=edge|Cache-Control:no-store, no-cache, must-revalidate, post-check=0, pre-check=0|Expires:-1|Pragma:no-cache
